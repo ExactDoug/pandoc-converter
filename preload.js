@@ -5,6 +5,8 @@ contextBridge.exposeInMainWorld('electronAPI', {
     convertFile: (inputPath, outputPath) => ipcRenderer.invoke('convert-file', inputPath, outputPath),
     checkPandoc: () => ipcRenderer.invoke('check-pandoc'),
     saveFileDialog: (defaultPath) => ipcRenderer.invoke('save-file-dialog', defaultPath),
+    checkFileExists: (filePath) => ipcRenderer.invoke('check-file-exists', filePath),
+    getUniqueFilename: (filePath) => ipcRenderer.invoke('get-unique-filename', filePath),
     // Get file path from File object using webUtils
     getFilePath: (file) => {
         try {

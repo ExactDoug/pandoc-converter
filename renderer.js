@@ -174,9 +174,69 @@ function updateFileList() {
     });
 }
 
+// Show collision dialog when output file exists
+function showCollisionDialog(fileName, outputPath) {
+    return new Promise((resolve) => {
+        const outputName = outputPath.split(/[\\/]/).pop();
+        
+        const overlay = document.createElement('div');
+        overlay.className = 'dialog-overlay';
+        
+        const dialog = document.createElement('div');
+        dialog.className = 'collision-dialog';
+        
+        dialog.innerHTML = `
+            <h3>⚠️ File Already Exists</h3>
+            <p>The output file already exists:</p>
+            <p class="file-path">${outputName}</p>
+            <p>What would you like to do?</p>
+            <div class="dialog-buttons">
+                <button class="dialog-btn btn-overwrite" data-choice="overwrite">
+                    Overwrite
+                </button>
+                <button class="dialog-btn btn-rename" data-choice="rename">
+                    Rename (add counter)
+                </button>
+                <button class="dialog-btn btn-cancel" data-choice="cancel">
+                    Cancel
+                </button>
+            </div>
+        `;
+        
+        overlay.appendChild(dialog);
+        document.body.appendChild(overlay);
+        
+        // Handle button clicks
+        dialog.querySelectorAll('.dialog-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const choice = btn.dataset.choice;
+                document.body.removeChild(overlay);
+                resolve(choice);
+            });
+        });
+    });
+}
+
 async function convertSingleFile(index) {
     const file = selectedFiles[index];
-    const outputPath = file.path.replace(/\.docx$/i, '.md');
+    let outputPath = file.path.replace(/\.docx$/i, '.md');
+
+    // Check if output file already exists
+    const fileExists = await window.electronAPI.checkFileExists(outputPath);
+    
+    if (fileExists) {
+        const choice = await showCollisionDialog(file.name, outputPath);
+        
+        if (choice === 'cancel') {
+            logMessage(`⏭️ Skipped: ${file.name} (file already exists)`, 'info');
+            return;
+        } else if (choice === 'rename') {
+            outputPath = await window.electronAPI.getUniqueFilename(outputPath);
+            const newName = outputPath.split(/[\\/]/).pop();
+            logMessage(`📝 Renaming output to: ${newName}`, 'info');
+        }
+        // If 'overwrite', just proceed with original outputPath
+    }
 
     file.status = 'processing';
     updateFileList();
@@ -185,7 +245,8 @@ async function convertSingleFile(index) {
         const result = await window.electronAPI.convertFile(file.path, outputPath);
         if (result.success) {
             file.status = 'success';
-            logMessage(`✅ Converted: ${file.name}`, 'success');
+            const outputName = outputPath.split(/[\\/]/).pop();
+            logMessage(`✅ Converted: ${file.name} → ${outputName}`, 'success');
             logMessage(`   Command: ${result.command}`, 'info');
         } else {
             file.status = 'error';

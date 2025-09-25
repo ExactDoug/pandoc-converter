@@ -2,6 +2,7 @@ const { app, BrowserWindow, ipcMain, dialog } = require('electron');
 const path = require('path');
 const { exec } = require('child_process');
 const fs = require('fs').promises;
+const fsSync = require('fs');
 
 let mainWindow;
 
@@ -111,4 +112,40 @@ ipcMain.handle('save-file-dialog', async (event, defaultPath) => {
         return result.filePath;
     }
     return null;
+});
+
+// Check if file exists
+ipcMain.handle('check-file-exists', async (event, filePath) => {
+    try {
+        return fsSync.existsSync(filePath);
+    } catch (error) {
+        console.error('Error checking file existence:', error);
+        return false;
+    }
+});
+
+// Generate unique filename with counter suffix
+ipcMain.handle('get-unique-filename', async (event, filePath) => {
+    try {
+        if (!fsSync.existsSync(filePath)) {
+            return filePath;
+        }
+
+        const dir = path.dirname(filePath);
+        const ext = path.extname(filePath);
+        const nameWithoutExt = path.basename(filePath, ext);
+
+        let counter = 1;
+        let newPath = path.join(dir, `${nameWithoutExt} (${counter})${ext}`);
+
+        while (fsSync.existsSync(newPath)) {
+            counter++;
+            newPath = path.join(dir, `${nameWithoutExt} (${counter})${ext}`);
+        }
+
+        return newPath;
+    } catch (error) {
+        console.error('Error generating unique filename:', error);
+        return filePath;
+    }
 });

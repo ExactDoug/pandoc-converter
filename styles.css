@@ -271,3 +271,117 @@ h1 {
     color: #c62828;
     background: #ffebee;
 }
+
+/* Collision Dialog Styles */
+.dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.collision-dialog {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.collision-dialog h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.collision-dialog p {
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.collision-dialog .file-path {
+    background: #f5f5f5;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    color: #333;
+    word-break: break-all;
+}
+
+.dialog-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.dialog-btn {
+    flex: 1;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-overwrite {
+    background: #f44336;
+    color: white;
+}
+
+.btn-overwrite:hover {
+    background: #d32f2f;
+    transform: translateY(-1px);
+}
+
+.btn-rename {
+    background: #4CAF50;
+    color: white;
+}
+
+.btn-rename:hover {
+    background: #45a049;
+    transform: translateY(-1px);
+}
+
+.btn-cancel {
+    background: #e0e0e0;
+    color: #333;
+}
+
+.btn-cancel:hover {
+    background: #d0d0d0;
+    transform: translateY(-1px);
+}
