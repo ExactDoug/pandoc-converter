@@ -1,0 +1,52 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Main gradient background -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glassmorphism effect for arrow -->
+    <linearGradient id="glassGradient" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.7" />
+    </linearGradient>
+    
+    <!-- Subtle shadow -->
+    <filter id="softShadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dx="0" dy="4" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background with rounded corners -->
+  <rect width="512" height="512" rx="110" fill="url(#bgGradient)"/>
+  
+  <!-- Modern conversion arrow - single bold symbol -->
+  <!-- Arrow shaft with 3D depth -->
+  <rect x="140" y="220" width="180" height="72" rx="36" 
+        fill="url(#glassGradient)" 
+        filter="url(#softShadow)"
+        opacity="0.95"/>
+  
+  <!-- Arrow head - bold and geometric -->
+  <path d="M 320 180 L 420 256 L 320 332 Z" 
+        fill="url(#glassGradient)" 
+        filter="url(#softShadow)"
+        opacity="0.95"/>
+  
+  <!-- Subtle accent - small document corner fold (left side) -->
+  <path d="M 100 200 L 100 280 L 120 280 L 140 260 L 140 200 Z" 
+        fill="white" 
+        opacity="0.5"/>
+  <path d="M 120 280 L 140 260 L 120 260 Z" 
+        fill="white" 
+        opacity="0.3"/>
+</svg>

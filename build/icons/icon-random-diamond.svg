@@ -1,0 +1,11 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Random idea 5: Diamond shape (card suit) morphing -->
+  <rect width="256" height="256" rx="56" fill="#EC4899"/>
+  
+  <!-- Diamond that's slightly twisted/skewed to suggest transformation -->
+  <g transform="translate(128, 128)">
+    <path d="M 0,-60 L 40,0 L 0,60 L -40,0 Z" fill="white"/>
+    <!-- Second diamond offset and rotated -->
+    <path d="M 0,-60 L 40,0 L 0,60 L -40,0 Z" fill="white" opacity="0.4" transform="rotate(15) translate(15,0)"/>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dad joke: "It grew on me" - growing arrow -->
+  <rect width="256" height="256" rx="56" fill="#4F46E5"/>
+  
+  <!-- Arrow that gets progressively larger (growth) -->
+  <g fill="white">
+    <!-- Small arrow -->
+    <path d="M 64 128 L 80 128 L 80 120 L 96 128 L 80 136 L 80 128" opacity="0.3"/>
+    <!-- Medium arrow -->
+    <path d="M 104 128 L 128 128 L 128 116 L 152 128 L 128 140 L 128 128" opacity="0.6"/>
+    <!-- Large arrow -->
+    <path d="M 160 128 L 192 128 L 192 112 L 224 128 L 192 144 L 192 128" opacity="1"/>
+  </g>
+</svg>

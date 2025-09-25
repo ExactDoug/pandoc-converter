@@ -1,0 +1,15 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- P for Pandoc with conversion hint -->
+  <rect width="256" height="256" rx="56" fill="#6D28D9"/>
+  
+  <!-- Bold "P" -->
+  <path d="M 64 192 L 64 64 L 144 64 Q 192 64 192 112 Q 192 160 144 160 L 96 160 L 96 192 Z
+           M 96 96 L 96 128 L 144 128 Q 160 128 160 112 Q 160 96 144 96 Z" 
+        fill="white"/>
+  
+  <!-- Arrow coming out suggesting conversion -->
+  <path d="M 170 112 L 200 112 M 190 102 L 200 112 L 190 122" 
+        stroke="white" 
+        stroke-width="12" 
+        stroke-linecap="round"/>
+</svg>

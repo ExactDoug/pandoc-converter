@@ -1,0 +1,13 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- L-corner = document corner fold + markdown angle bracket -->
+  <rect width="256" height="256" rx="56" fill="#8B5CF6"/>
+  
+  <!-- L as both doc corner AND angle bracket -->
+  <path d="M 80 80 L 80 176 L 176 176 L 176 144 L 112 144 L 112 80 Z" 
+        fill="white"/>
+  
+  <!-- Subtle document lines in the vertical part -->
+  <rect x="88" y="96" width="16" height="2" fill="#8B5CF6" opacity="0.5"/>
+  <rect x="88" y="104" width="16" height="2" fill="#8B5CF6" opacity="0.5"/>
+  <rect x="88" y="112" width="12" height="2" fill="#8B5CF6" opacity="0.5"/>
+</svg>

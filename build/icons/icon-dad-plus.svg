@@ -1,0 +1,8 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dad joke: Swiss flag is a plus -->
+  <rect width="256" height="256" rx="56" fill="#DC2626"/>
+  
+  <!-- Big plus sign (like Swiss flag) -->
+  <path d="M 108 64 L 148 64 L 148 108 L 192 108 L 192 148 L 148 148 L 148 192 L 108 192 L 108 148 L 64 148 L 64 108 L 108 108 Z" 
+        fill="white"/>
+</svg>

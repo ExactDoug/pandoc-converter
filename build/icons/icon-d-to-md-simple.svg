@@ -1,0 +1,22 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- D->MD ultra simple -->
+  <rect width="256" height="256" rx="56" fill="#6D28D9"/>
+  
+  <!-- Single centered arrow with D and MD -->
+  <g fill="white">
+    <!-- D -->
+    <path d="M 48 96 L 48 160 L 80 160 Q 112 160 112 128 Q 112 96 80 96 Z
+             M 64 112 L 80 112 Q 96 112 96 128 Q 96 144 80 144 L 64 144 Z"/>
+    
+    <!-- Arrow -->
+    <path d="M 120 128 L 152 128 M 144 120 L 152 128 L 144 136" 
+          stroke="white" 
+          stroke-width="12" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"
+          fill="none"/>
+    
+    <!-- MD -->
+    <text x="164" y="148" font-family="monospace" font-size="48" font-weight="bold">MD</text>
+  </g>
+</svg>

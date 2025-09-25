@@ -1,0 +1,16 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Square (DOCX) transforming to circle (MD) -->
+  <rect width="256" height="256" rx="48" fill="#8B5CF6"/>
+  
+  <g transform="translate(128, 128)">
+    <!-- Square with doc lines (DOCX) -->
+    <rect x="-60" y="-48" width="56" height="56" rx="4" fill="white" opacity="0.9"/>
+    <rect x="-52" y="-32" width="40" height="2" fill="#8B5CF6"/>
+    <rect x="-52" y="-24" width="40" height="2" fill="#8B5CF6"/>
+    <rect x="-52" y="-16" width="32" height="2" fill="#8B5CF6"/>
+    
+    <!-- Circle with hashtag (MD) -->
+    <circle cx="32" cy="0" r="32" fill="white" opacity="0.9"/>
+    <text x="32" y="8" font-family="monospace" font-size="28" font-weight="bold" text-anchor="middle" fill="#8B5CF6">#</text>
+  </g>
+</svg>

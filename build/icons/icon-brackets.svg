@@ -1,0 +1,12 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Single solid color - no gradient -->
+  <rect width="256" height="256" rx="56" fill="#7C3AED"/>
+  
+  <!-- Super bold, super simple bracket pair suggesting code/markdown -->
+  <g fill="none" stroke="white" stroke-width="24" stroke-linecap="round">
+    <!-- Left bracket -->
+    <path d="M 96 80 L 64 128 L 96 176"/>
+    <!-- Right bracket -->
+    <path d="M 160 80 L 192 128 L 160 176"/>
+  </g>
+</svg>

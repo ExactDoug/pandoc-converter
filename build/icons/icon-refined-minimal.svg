@@ -1,0 +1,10 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Exclamation to markdown emphasis -->
+  <rect width="256" height="256" rx="56" fill="#4F46E5"/>
+  
+  <!-- Vertical line = pipe character in MD tables -->
+  <rect x="120" y="64" width="16" height="112" fill="white" rx="8"/>
+  
+  <!-- Dot = bullet point in MD -->
+  <circle cx="128" cy="200" r="16" fill="white"/>
+</svg>

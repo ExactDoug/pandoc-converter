@@ -1,0 +1,16 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- D to MD converter icon -->
+  <rect width="256" height="256" rx="56" fill="#7C3AED"/>
+  
+  <!-- "D" on left -->
+  <text x="64" y="148" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="white">D</text>
+  
+  <!-- Arrow -->
+  <g fill="none" stroke="white" stroke-width="12" stroke-linecap="round">
+    <line x1="104" y1="128" x2="144" y2="128"/>
+    <polyline points="134,118 144,128 134,138"/>
+  </g>
+  
+  <!-- "MD" on right -->
+  <text x="160" y="148" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="white">MD</text>
+</svg>

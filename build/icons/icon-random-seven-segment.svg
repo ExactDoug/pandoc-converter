@@ -1,0 +1,16 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Random idea 2: Seven-segment display (70) forming "P" -->
+  <rect width="256" height="256" rx="56" fill="#6366F1"/>
+  
+  <!-- Seven-segment display style "P" -->
+  <g fill="white">
+    <!-- Top horizontal -->
+    <rect x="80" y="60" width="80" height="16" rx="8"/>
+    <!-- Top right vertical -->
+    <rect x="144" y="60" width="16" height="64" rx="8"/>
+    <!-- Middle horizontal -->
+    <rect x="80" y="120" width="80" height="16" rx="8"/>
+    <!-- Left vertical (full) -->
+    <rect x="80" y="60" width="16" height="136" rx="8"/>
+  </g>
+</svg>

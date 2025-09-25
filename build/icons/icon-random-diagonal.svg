@@ -1,0 +1,8 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Random idea 1: Split diagonal (55) with dark accent (39) -->
+  <rect width="256" height="256" rx="56" fill="#7C3AED"/>
+  
+  <!-- Diagonal split suggesting transformation -->
+  <polygon points="64,64 192,64 192,192" fill="white"/>
+  <polygon points="64,64 64,192 192,192" fill="#393939"/>
+</svg>

@@ -1,0 +1,16 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Brackets suggesting code/markdown conversion -->
+  <rect width="256" height="256" rx="56" fill="#7C3AED"/>
+  
+  <!-- Left bracket with doc lines -->
+  <g fill="none" stroke="white" stroke-width="24" stroke-linecap="round">
+    <path d="M 96 80 L 64 128 L 96 176"/>
+    <!-- Doc lines inside left bracket -->
+    <path d="M 80 116 L 88 116 M 80 128 L 88 128 M 80 140 L 84 140" stroke-width="4" opacity="0.5"/>
+  </g>
+  
+  <!-- Right bracket clean (markdown) -->
+  <g fill="none" stroke="white" stroke-width="24" stroke-linecap="round">
+    <path d="M 160 80 L 192 128 L 160 176"/>
+  </g>
+</svg>

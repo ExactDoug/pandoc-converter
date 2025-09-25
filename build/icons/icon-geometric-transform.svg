@@ -1,0 +1,16 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Solid purple background for clarity -->
+  <rect width="256" height="256" rx="48" fill="#8B5CF6"/>
+  
+  <!-- Two overlapping shapes suggesting transformation -->
+  <!-- Square transforming into circle - abstract but clear -->
+  <g transform="translate(128, 128)">
+    <!-- White square (document metaphor) -->
+    <rect x="-60" y="-48" width="56" height="56" rx="4" fill="white" opacity="0.9"/>
+    
+    <!-- White circle (transformed state) -->
+    <circle cx="32" cy="0" r="32" fill="white" opacity="0.9"/>
+    
+    <!-- Overlap creates visual interest and suggests transformation -->
+  </g>
+</svg>

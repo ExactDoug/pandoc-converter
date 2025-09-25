@@ -1,0 +1,20 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Lightning bolt showing fast conversion -->
+  <rect width="256" height="256" rx="56" fill="#F59E0B"/>
+  
+  <!-- Lightning that transforms from complex to simple -->
+  <g fill="white">
+    <!-- Top part: thick/complex (DOCX) -->
+    <path d="M 96 64 L 144 112 L 120 112 Z" opacity="0.6"/>
+    
+    <!-- Middle: lightning bolt -->
+    <path d="M 120 112 L 160 192 L 112 144 L 136 144 Z"/>
+    
+    <!-- Small doc lines at top -->
+    <rect x="104" y="76" width="24" height="2" fill="#F59E0B" opacity="0.5"/>
+    <rect x="104" y="82" width="24" height="2" fill="#F59E0B" opacity="0.5"/>
+    
+    <!-- MD at bottom -->
+    <text x="136" y="184" font-family="monospace" font-size="16" font-weight="bold" fill="#F59E0B">MD</text>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dad joke: Atoms make up everything -->
+  <rect width="256" height="256" rx="56" fill="#F59E0B"/>
+  
+  <!-- Atom symbol with orbits -->
+  <g transform="translate(128, 128)">
+    <!-- Nucleus -->
+    <circle cx="0" cy="0" r="20" fill="white"/>
+    
+    <!-- Electron orbits -->
+    <ellipse cx="0" cy="0" rx="60" ry="20" fill="none" stroke="white" stroke-width="8" transform="rotate(45)"/>
+    <ellipse cx="0" cy="0" rx="60" ry="20" fill="none" stroke="white" stroke-width="8" transform="rotate(-45)"/>
+  </g>
+</svg>

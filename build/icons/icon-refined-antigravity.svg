@@ -1,0 +1,12 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Heavy DOCX going down, light MD going up -->
+  <rect width="256" height="256" rx="56" fill="#EC4899"/>
+  
+  <!-- Heavy document going down -->
+  <rect x="88" y="144" width="40" height="48" rx="4" fill="white" opacity="0.9"/>
+  <rect x="96" y="152" width="24" height="4" fill="#EC4899"/>
+  <rect x="96" y="160" width="24" height="4" fill="#EC4899"/>
+  
+  <!-- Light markdown floating up (anti-gravity) -->
+  <text x="168" y="96" font-family="monospace" font-size="32" font-weight="bold" text-anchor="middle" fill="white">#</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Diagonal = transformation boundary between formats -->
+  <rect width="256" height="256" rx="56" fill="#7C3AED"/>
+  
+  <!-- DOCX side (complex) -->
+  <g fill="white" opacity="0.9">
+    <polygon points="64,64 192,192 64,192"/>
+    <rect x="80" y="140" width="40" height="2" fill="#7C3AED"/>
+    <rect x="80" y="148" width="40" height="2" fill="#7C3AED"/>
+    <rect x="80" y="156" width="32" height="2" fill="#7C3AED"/>
+  </g>
+  
+  <!-- MD side (simple) -->
+  <g fill="white">
+    <polygon points="192,64 192,192 64,64"/>
+    <text x="140" y="120" font-family="monospace" font-size="28" font-weight="bold" fill="#7C3AED">#</text>
+  </g>
+</svg>

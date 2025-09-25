@@ -1,0 +1,36 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient background matching app theme -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background with rounded corners -->
+  <rect width="512" height="512" rx="80" fill="url(#bgGradient)"/>
+  
+  <!-- Simple document symbol (left) - bold and clear -->
+  <rect x="80" y="140" width="150" height="232" fill="white" rx="12"/>
+  <rect x="80" y="140" width="150" height="60" fill="white" opacity="0.5" rx="12"/>
+  
+  <!-- Large bold arrow (center) -->
+  <path d="M 250 220 L 250 292 L 220 256 Z" 
+        fill="white" 
+        transform="rotate(0 250 256)"/>
+  <rect x="250" y="236" width="60" height="40" fill="white"/>
+  
+  <!-- Simple "M↓" symbol (right) - representing Markdown -->
+  <text x="380" y="300" 
+        font-family="Arial, sans-serif" 
+        font-size="140" 
+        font-weight="900" 
+        fill="white" 
+        text-anchor="middle">M</text>
+  <path d="M 345 310 L 380 350 L 415 310" 
+        stroke="white" 
+        stroke-width="20" 
+        fill="none" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+</svg>

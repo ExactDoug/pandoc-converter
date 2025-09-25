@@ -1,0 +1,22 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Random idea 4: Grid pattern (81) with missing piece -->
+  <rect width="256" height="256" rx="56" fill="#7C3AED"/>
+  
+  <!-- 3x3 grid with one piece transforming -->
+  <g fill="white">
+    <rect x="64" y="64" width="40" height="40" rx="4"/>
+    <rect x="108" y="64" width="40" height="40" rx="4"/>
+    <!-- Missing top-right piece -->
+    
+    <rect x="64" y="108" width="40" height="40" rx="4"/>
+    <rect x="108" y="108" width="40" height="40" rx="4"/>
+    <rect x="152" y="108" width="40" height="40" rx="4"/>
+    
+    <rect x="64" y="152" width="40" height="40" rx="4"/>
+    <rect x="108" y="152" width="40" height="40" rx="4"/>
+    <rect x="152" y="152" width="40" height="40" rx="4"/>
+    
+    <!-- The missing piece as a circle (transformed) -->
+    <circle cx="172" cy="84" r="20" fill="white" opacity="0.6"/>
+  </g>
+</svg>

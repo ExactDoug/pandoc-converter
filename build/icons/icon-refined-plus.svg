@@ -1,0 +1,17 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Plus sign = adding markdown capability to documents -->
+  <rect width="256" height="256" rx="56" fill="#DC2626"/>
+  
+  <!-- Plus with document hints -->
+  <g fill="white">
+    <!-- Horizontal = document -->
+    <rect x="64" y="108" width="128" height="40" rx="4"/>
+    <rect x="80" y="120" width="96" height="2" fill="#DC2626" opacity="0.5"/>
+    <rect x="80" y="128" width="96" height="2" fill="#DC2626" opacity="0.5"/>
+    <rect x="80" y="136" width="64" height="2" fill="#DC2626" opacity="0.5"/>
+    
+    <!-- Vertical = markdown (hashtag hint) -->
+    <rect x="108" y="64" width="40" height="128" rx="4"/>
+    <text x="128" y="96" font-family="monospace" font-size="20" font-weight="bold" text-anchor="middle" fill="#DC2626">#</text>
+  </g>
+</svg>

@@ -1,0 +1,33 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="512" height="512" rx="110" fill="url(#bgGradient)"/>
+  
+  <!-- Simple, bold document with corner fold -->
+  <rect x="120" y="140" width="272" height="332" rx="12" fill="white"/>
+  
+  <!-- Corner fold (top right) -->
+  <path d="M 360 140 L 360 192 L 392 160 Z" fill="#764ba2" opacity="0.3"/>
+  <path d="M 360 140 L 392 140 L 392 160 L 360 192 Z" fill="white"/>
+  
+  <!-- Bold circular arrows (conversion symbol) centered -->
+  <path d="M 256 260 A 60 60 0 1 1 256 380" 
+        stroke="white" 
+        stroke-width="28" 
+        fill="none" 
+        stroke-linecap="round"/>
+  <polygon points="226,250 256,230 256,270" fill="white"/>
+  
+  <path d="M 256 380 A 60 60 0 1 1 256 260" 
+        stroke="#764ba2" 
+        stroke-width="28" 
+        fill="none" 
+        stroke-linecap="round"/>
+  <polygon points="286,390 256,410 256,370" fill="#764ba2"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Random idea 3: L-shape corner (90 degrees) -->
+  <rect width="256" height="256" rx="56" fill="#8B5CF6"/>
+  
+  <!-- Bold L-shaped corner suggesting document fold -->
+  <path d="M 80 80 L 80 176 L 176 176" 
+        fill="none" 
+        stroke="white" 
+        stroke-width="32" 
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+</svg>

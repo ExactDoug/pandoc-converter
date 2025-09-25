@@ -1,0 +1,24 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Grid = DOCX structure, missing piece = simplified to MD -->
+  <rect width="256" height="256" rx="56" fill="#7C3AED"/>
+  
+  <!-- 3x3 grid of document pages -->
+  <g fill="white">
+    <!-- Row 1 -->
+    <rect x="64" y="64" width="40" height="40" rx="4"/>
+    <rect x="108" y="64" width="40" height="40" rx="4"/>
+    <rect x="152" y="64" width="40" height="40" rx="4" opacity="0.2"/>
+    
+    <!-- Row 2 -->
+    <rect x="64" y="108" width="40" height="40" rx="4"/>
+    <rect x="108" y="108" width="40" height="40" rx="4"/>
+    <rect x="152" y="108" width="40" height="40" rx="4" opacity="0.4"/>
+    
+    <!-- Row 3 -->
+    <rect x="64" y="152" width="40" height="40" rx="4"/>
+    <rect x="108" y="152" width="40" height="40" rx="4" opacity="0.6"/>
+    
+    <!-- Missing piece transformed to MD -->
+    <text x="172" y="180" font-family="monospace" font-size="20" font-weight="bold" text-anchor="middle">.md</text>
+  </g>
+</svg>

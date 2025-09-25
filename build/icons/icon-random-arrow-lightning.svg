@@ -1,0 +1,8 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Random idea 7: Arrow + Lightning fusion -->
+  <rect width="256" height="256" rx="56" fill="#F59E0B"/>
+  
+  <!-- Lightning bolt that ends in an arrow point -->
+  <path d="M 96 64 L 144 112 L 120 112 L 160 192 L 112 144 L 136 144 Z" 
+        fill="white"/>
+</svg>

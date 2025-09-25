@@ -1,0 +1,38 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background - 256x256 grid, rounded corners -->
+  <rect width="256" height="256" rx="56" fill="url(#bg)"/>
+  
+  <!-- Document with corner fold - centered, aligned to 8px grid -->
+  <!-- Base document -->
+  <rect x="64" y="56" width="128" height="144" rx="4" fill="white"/>
+  
+  <!-- Corner fold - dog-ear pattern -->
+  <path d="M 168 56 L 168 80 L 192 56 Z" fill="#764ba2" opacity="0.2"/>
+  <path d="M 168 56 L 192 56 L 192 80 L 168 80 Z" fill="white"/>
+  
+  <!-- Circular refresh arrows - Material pattern, 48px diameter -->
+  <!-- Top arc (clockwise) -->
+  <path d="M 128 120 A 32 32 0 1 1 160 152" 
+        stroke="white" 
+        stroke-width="12" 
+        fill="none" 
+        stroke-linecap="round"/>
+  <!-- Top arrowhead -->
+  <polygon points="154,146 166,152 154,158" fill="white"/>
+  
+  <!-- Bottom arc (counter-clockwise) -->
+  <path d="M 128 184 A 32 32 0 1 1 96 152" 
+        stroke="#764ba2" 
+        stroke-width="12" 
+        fill="none" 
+        stroke-linecap="round"/>
+  <!-- Bottom arrowhead -->
+  <polygon points="102,146 90,152 102,158" fill="#764ba2"/>
+</svg>

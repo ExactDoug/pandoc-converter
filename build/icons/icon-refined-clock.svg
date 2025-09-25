@@ -1,0 +1,20 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Clock showing conversion time/process -->
+  <rect width="256" height="256" rx="56" fill="#10B981"/>
+  
+  <g transform="translate(128, 128)">
+    <!-- Clock circle -->
+    <circle cx="0" cy="0" r="64" fill="none" stroke="white" stroke-width="16"/>
+    
+    <!-- 12 o'clock position - DOCX -->
+    <rect x="-8" y="-60" width="16" height="20" rx="2" fill="white"/>
+    <rect x="-4" y="-56" width="8" height="1" fill="#10B981"/>
+    <rect x="-4" y="-52" width="8" height="1" fill="#10B981"/>
+    
+    <!-- 3 o'clock position - MD -->
+    <text x="52" y="6" font-family="monospace" font-size="16" font-weight="bold" fill="white">#</text>
+    
+    <!-- Clock hands pointing from 12 to 3 (conversion direction) -->
+    <rect x="-4" y="-40" width="8" height="40" fill="white" rx="4" transform="rotate(45)"/>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Deep purple background -->
+  <rect width="256" height="256" rx="56" fill="#6D28D9"/>
+  
+  <!-- Bold "P" with a cut-out suggesting transformation -->
+  <path d="M 64 192 L 64 64 L 144 64 Q 192 64 192 112 Q 192 160 144 160 L 96 160 L 96 192 Z
+           M 96 96 L 96 128 L 144 128 Q 160 128 160 112 Q 160 96 144 96 Z" 
+        fill="white"/>
+  
+  <!-- Add a subtle diagonal cut through the P to suggest change/conversion -->
+  <path d="M 120 140 L 180 80" 
+        stroke="#6D28D9" 
+        stroke-width="12" 
+        stroke-linecap="round"/>
+</svg>

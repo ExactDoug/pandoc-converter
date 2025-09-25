@@ -1,0 +1,19 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- DOCX shrinking to MD essence -->
+  <rect width="256" height="256" rx="56" fill="#4F46E5"/>
+  
+  <!-- Large complex DOCX -->
+  <g fill="white">
+    <rect x="48" y="108" width="48" height="40" rx="4" opacity="0.3"/>
+    <rect x="56" y="116" width="32" height="2" opacity="0.3"/>
+    <rect x="56" y="122" width="32" height="2" opacity="0.3"/>
+    <rect x="56" y="128" width="24" height="2" opacity="0.3"/>
+    
+    <!-- Medium simplified -->
+    <rect x="112" y="116" width="32" height="24" rx="2" opacity="0.6"/>
+    <rect x="120" y="124" width="16" height="2" opacity="0.6"/>
+    
+    <!-- Small pure MD -->
+    <text x="192" y="136" font-family="monospace" font-size="24" font-weight="bold" fill="white">MD</text>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Research-based icon: pixel-perfect on 8px grid -->
+  <rect width="256" height="256" rx="56" fill="#7C3AED"/>
+  
+  <!-- Left element: Complex document (aligned to 8px grid) -->
+  <g fill="white">
+    <!-- Document base at x=48 (6*8) -->
+    <rect x="48" y="80" width="64" height="96" rx="8"/>
+    <!-- Document lines (all on 8px grid) -->
+    <rect x="56" y="96" width="48" height="8" fill="#7C3AED"/>
+    <rect x="56" y="112" width="48" height="8" fill="#7C3AED"/>
+    <rect x="56" y="128" width="32" height="8" fill="#7C3AED"/>
+  </g>
+  
+  <!-- Arrow (center at 128, width on grid) -->
+  <g stroke="white" stroke-width="16" stroke-linecap="square" fill="none">
+    <line x1="120" y1="128" x2="136" y2="128"/>
+    <polyline points="128,120 136,128 128,136"/>
+  </g>
+  
+  <!-- Right element: Simple/pure (markdown essence) -->
+  <g fill="white">
+    <!-- Clean rectangle -->
+    <rect x="144" y="104" width="64" height="48" rx="8"/>
+    <!-- Single hash symbol centered -->
+    <rect x="168" y="120" width="16" height="16" fill="#7C3AED"/>
+  </g>
+</svg>

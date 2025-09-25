@@ -1,0 +1,16 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Diamond morphing - sharp DOCX to smooth MD -->
+  <rect width="256" height="256" rx="56" fill="#EC4899"/>
+  
+  <g transform="translate(128, 128)">
+    <!-- Sharp diamond (DOCX) -->
+    <path d="M 0,-60 L 40,0 L 0,60 L -40,0 Z" fill="white" opacity="0.4"/>
+    
+    <!-- Smoother diamond (MD) offset -->
+    <g transform="translate(20, 0)">
+      <path d="M 0,-40 L 30,0 L 0,40 L -30,0 Z" fill="white"/>
+      <!-- MD hint inside -->
+      <text x="0" y="6" font-family="monospace" font-size="20" font-weight="bold" text-anchor="middle" fill="#EC4899">M</text>
+    </g>
+  </g>
+</svg>

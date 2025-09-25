@@ -1,0 +1,12 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ultra-simple: just an arrow, following research on simplicity -->
+  <rect width="256" height="256" rx="56" fill="#7C3AED"/>
+  
+  <!-- Bold arrow only - no text per research guidelines -->
+  <g fill="white">
+    <!-- Arrow shaft -->
+    <rect x="64" y="112" width="96" height="32" rx="16"/>
+    <!-- Arrow head -->
+    <path d="M 144 88 L 192 128 L 144 168 L 144 144 L 168 128 L 144 112 Z"/>
+  </g>
+</svg>
