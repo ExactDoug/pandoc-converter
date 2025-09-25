@@ -1,10 +1,17 @@
-const { contextBridge, ipcRenderer } = require('electron');
+const { contextBridge, ipcRenderer, webUtils } = require('electron');
 
 contextBridge.exposeInMainWorld('electronAPI', {
     selectFiles: () => ipcRenderer.invoke('select-files'),
     convertFile: (inputPath, outputPath) => ipcRenderer.invoke('convert-file', inputPath, outputPath),
     checkPandoc: () => ipcRenderer.invoke('check-pandoc'),
     saveFileDialog: (defaultPath) => ipcRenderer.invoke('save-file-dialog', defaultPath),
-    // New: Get file paths from dropped files
-    getFilePaths: (files) => ipcRenderer.invoke('get-file-paths', files)
+    // Get file path from File object using webUtils
+    getFilePath: (file) => {
+        try {
+            return webUtils.getPathForFile(file);
+        } catch (error) {
+            console.error('Error getting file path:', error);
+            return null;
+        }
+    }
 });

@@ -10,14 +10,6 @@ const pandocStatus = document.getElementById('pandocStatus');
 
 let selectedFiles = [];
 
-// Listen for dropped files from main process
-window.addEventListener('message', (event) => {
-    if (event.data.type === 'files-dropped') {
-        console.log('Files dropped via main process:', event.data.paths);
-        addFiles(event.data.paths);
-    }
-});
-
 // Check Pandoc installation on startup
 async function checkPandocInstallation() {
     const result = await window.electronAPI.checkPandoc();
@@ -56,10 +48,34 @@ function preventDefaults(e) {
     }, false);
 });
 
-// Handle dropped files (visual feedback only - actual handling in main process)
-dropZone.addEventListener('drop', (e) => {
-    // Main process will handle the actual file paths
-    // This is just for immediate visual feedback
+// Handle dropped files using webUtils.getPathForFile()
+dropZone.addEventListener('drop', async (e) => {
+    const files = Array.from(e.dataTransfer.files).filter(file =>
+        file.name.toLowerCase().endsWith('.docx')
+    );
+
+    if (files.length > 0) {
+        // Use webUtils.getPathForFile() via the preload bridge
+        const filePaths = [];
+        
+        for (const file of files) {
+            const filePath = window.electronAPI.getFilePath(file);
+            if (filePath) {
+                console.log('Got file path:', filePath);
+                filePaths.push(filePath);
+            } else {
+                console.error('Could not get path for file:', file.name);
+            }
+        }
+        
+        if (filePaths.length > 0) {
+            addFiles(filePaths);
+        } else {
+            alert('Could not access file paths. Please use the Browse button instead.');
+        }
+    } else {
+        alert('Please drop only DOCX files');
+    }
 });
 
 // Browse button click
