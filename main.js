@@ -14,7 +14,8 @@ function createWindow() {
             contextIsolation: true,
             preload: path.join(__dirname, 'preload.js'),
             enableRemoteModule: false,
-            sandbox: false // Required for file.path property in drag-and-drop
+            sandbox: false, // Required for file.path property in drag-and-drop
+            webSecurity: false // Allow file:// protocol access
         },
         icon: path.join(__dirname, 'icon.png'), // Add an icon if you have one
         title: 'Pandoc Converter'
@@ -22,10 +23,35 @@ function createWindow() {
 
     mainWindow.loadFile('index.html');
 
-    // Open DevTools in development
-    if (process.env.NODE_ENV === 'development') {
-        mainWindow.webContents.openDevTools();
-    }
+    // Open DevTools in development - let's open it to see console logs
+    mainWindow.webContents.openDevTools();
+    
+    // Handle file drops at the window level
+    mainWindow.webContents.on('will-navigate', (event, url) => {
+        event.preventDefault();
+    });
+    
+    // Handle dropped files
+    mainWindow.webContents.on('dom-ready', () => {
+        mainWindow.webContents.executeJavaScript(`
+            document.addEventListener('drop', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const files = Array.from(e.dataTransfer.files);
+                const paths = files.map(f => f.path).filter(p => p && p.endsWith('.docx'));
+                
+                if (paths.length > 0) {
+                    window.postMessage({ type: 'files-dropped', paths: paths }, '*');
+                }
+            });
+            
+            document.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+            });
+        `);
+    });
 }
 
 app.whenReady().then(createWindow);

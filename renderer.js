@@ -10,6 +10,14 @@ const pandocStatus = document.getElementById('pandocStatus');
 
 let selectedFiles = [];
 
+// Listen for dropped files from main process
+window.addEventListener('message', (event) => {
+    if (event.data.type === 'files-dropped') {
+        console.log('Files dropped via main process:', event.data.paths);
+        addFiles(event.data.paths);
+    }
+});
+
 // Check Pandoc installation on startup
 async function checkPandocInstallation() {
     const result = await window.electronAPI.checkPandoc();
@@ -48,23 +56,10 @@ function preventDefaults(e) {
     }, false);
 });
 
-// Handle dropped files
-dropZone.addEventListener('drop', async (e) => {
-    const files = Array.from(e.dataTransfer.files).filter(file =>
-        file.name.toLowerCase().endsWith('.docx')
-    );
-
-    if (files.length > 0) {
-        // In Electron, File objects have a path property
-        // Use it if available, otherwise fall back to file.name (shouldn't happen in Electron)
-        const filePaths = files.map(f => f.path || f.name).filter(path => path);
-        
-        if (filePaths.length > 0) {
-            addFiles(filePaths);
-        }
-    } else {
-        alert('Please drop only DOCX files');
-    }
+// Handle dropped files (visual feedback only - actual handling in main process)
+dropZone.addEventListener('drop', (e) => {
+    // Main process will handle the actual file paths
+    // This is just for immediate visual feedback
 });
 
 // Browse button click
