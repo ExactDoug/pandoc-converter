@@ -172,6 +172,26 @@ function updateFileList() {
             await convertSingleFile(index);
         });
     });
+
+    // Check if content overflows and add visual indicator
+    const container = document.querySelector('.container');
+    
+    function checkOverflow() {
+        const hasOverflow = container.scrollHeight > container.clientHeight;
+        const isAtBottom = container.scrollHeight - container.scrollTop <= container.clientHeight + 5; // 5px tolerance
+        
+        if (hasOverflow && !isAtBottom) {
+            container.classList.add('has-overflow');
+        } else {
+            container.classList.remove('has-overflow');
+        }
+    }
+    
+    checkOverflow();
+    
+    // Remove existing scroll listener if any, then add new one
+    container.removeEventListener('scroll', checkOverflow);
+    container.addEventListener('scroll', checkOverflow);
 }
 
 // Show collision dialog when output file exists
@@ -283,9 +303,23 @@ clearBtn.addEventListener('click', () => {
 });
 
 function logMessage(message, type = 'info') {
+    // Auto-show log section when first message is logged
+    logSection.style.display = 'block';
+    
     const logEntry = document.createElement('div');
     logEntry.className = `log-entry log-${type}`;
     logEntry.textContent = message;
     logContent.appendChild(logEntry);
     logContent.scrollTop = logContent.scrollHeight;
+    
+    // Re-check overflow when log grows
+    const container = document.querySelector('.container');
+    const hasOverflow = container.scrollHeight > container.clientHeight;
+    const isAtBottom = container.scrollHeight - container.scrollTop <= container.clientHeight + 5;
+    
+    if (hasOverflow && !isAtBottom) {
+        container.classList.add('has-overflow');
+    } else {
+        container.classList.remove('has-overflow');
+    }
 }
