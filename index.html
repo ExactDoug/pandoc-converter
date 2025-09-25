@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pandoc Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>📄 Pandoc Converter</h1>
+        <p class="subtitle">Convert DOCX files to Markdown (GFM) format</p>
+
+        <div class="pandoc-status" id="pandocStatus"></div>
+
+        <div class="drop-zone" id="dropZone">
+            <div class="drop-zone-icon">📁</div>
+            <div class="drop-zone-text">Drag & Drop DOCX files here</div>
+            <div class="drop-zone-subtext">or click to browse</div>
+            <button class="btn-browse" id="browseBtn">Browse Files</button>
+        </div>
+
+        <div id="fileList" class="file-list"></div>
+
+        <div class="actions" id="actions" style="display: none;">
+            <button class="btn-convert-all" id="convertAllBtn">Convert All Files</button>
+            <button class="btn-clear" id="clearBtn">Clear List</button>
+        </div>
+
+        <div class="log-section" id="logSection" style="display: none;">
+            <h3>Conversion Log</h3>
+            <div class="log-content" id="logContent"></div>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+
+</html>i
