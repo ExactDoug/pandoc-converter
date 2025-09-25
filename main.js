@@ -13,18 +13,18 @@ function createWindow() {
             nodeIntegration: false,
             contextIsolation: true,
             preload: path.join(__dirname, 'preload.js'),
-            enableRemoteModule: false,
-            sandbox: false, // Required for webUtils.getPathForFile()
-            webSecurity: false // Allow file:// protocol access
+            sandbox: false // Required for webUtils.getPathForFile()
         },
-        icon: path.join(__dirname, 'icon.png'), // Add an icon if you have one
+        icon: path.join(__dirname, 'icon.png'),
         title: 'Pandoc Converter'
     });
 
     mainWindow.loadFile('index.html');
 
-    // Open DevTools in development to see console logs
-    mainWindow.webContents.openDevTools();
+    // Open DevTools only in development
+    if (process.env.NODE_ENV === 'development') {
+        mainWindow.webContents.openDevTools();
+    }
 }
 
 app.whenReady().then(createWindow);
