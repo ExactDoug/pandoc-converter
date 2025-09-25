@@ -156,13 +156,21 @@ function updateFileList() {
                 <div class="file-name">${file.name}</div>
                 <div class="file-status ${statusClass}">${statusText}</div>
             </div>
-            <button class="btn-convert" onclick="convertSingleFile(${index})" 
+            <button class="btn-convert" data-index="${index}" 
                     ${file.status === 'processing' ? 'disabled' : ''}>
                 ${file.status === 'success' ? 'Convert Again' : 'Convert'}
             </button>
         `;
 
         fileList.appendChild(fileItem);
+    });
+
+    // Add event listeners to convert buttons
+    document.querySelectorAll('.btn-convert').forEach(button => {
+        button.addEventListener('click', async () => {
+            const index = parseInt(button.dataset.index);
+            await convertSingleFile(index);
+        });
     });
 }
 
