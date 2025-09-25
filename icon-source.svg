@@ -1,0 +1,30 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient background matching app theme -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="240" fill="url(#bgGradient)"/>
+  
+  <!-- Document icon (left side - DOCX) -->
+  <rect x="100" y="150" width="120" height="160" fill="white" rx="8"/>
+  <rect x="100" y="150" width="120" height="40" fill="#ffffff" opacity="0.3" rx="8"/>
+  <line x1="120" y1="210" x2="200" y2="210" stroke="#667eea" stroke-width="4"/>
+  <line x1="120" y1="230" x2="200" y2="230" stroke="#667eea" stroke-width="4"/>
+  <line x1="120" y1="250" x2="180" y2="250" stroke="#667eea" stroke-width="4"/>
+  
+  <!-- Arrow (center) -->
+  <path d="M 230 250 L 270 250 L 270 230 L 300 256 L 270 282 L 270 262 L 230 262 Z" 
+        fill="white" opacity="0.9"/>
+  
+  <!-- Markdown icon (right side - MD) -->
+  <rect x="310" y="150" width="120" height="160" fill="white" rx="8"/>
+  <text x="370" y="245" font-family="Arial, sans-serif" font-size="48" 
+        font-weight="bold" fill="#667eea" text-anchor="middle">MD</text>
+  <path d="M 330 280 L 340 270 L 350 280 M 350 270 L 360 280 L 370 270 L 380 280 M 380 270 L 390 280 L 400 270 L 410 280" 
+        stroke="#764ba2" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>
